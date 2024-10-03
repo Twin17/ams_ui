@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@300;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #333;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+}
+
+.header {
+    background-color: #46657a;
+    padding: 25px 100px;
+    font-weight: 600;
+    text-align: center;
+}
+
+main {
+    margin: 50px 100px;
+    width: 50%;
+    float: left;
+}
+
+main .aircraft {
+    margin-bottom: 50px;
+    background-color: rgb(127, 157, 255);
+    padding: 20px;
+}
+
+main .delete-icon {
+    float: left;
+    margin-left: 25px;
+    color: #134b57;
+    cursor: pointer;
+    transform: scale(2);
+}
+
+main .edit-icon {
+    float: left;
+    margin-left: 25px;
+    color: #165664;
+    cursor: pointer;
+    transform: scale(2);
+}
+
+main .delete-icon:hover,
+main .edit-icon:hover
+{
+    opacity: 0.5;
+}
+
+.user form input:not([type="checkbox"]), 
+.user form textarea, 
+.user form button {
+    width: 90%;
+    padding: 15px 5%;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    margin-bottom: 10px;
+    border: 0;
+    background: #222;
+    color: #fff;
+    outline: none;
+    font-size: 15px;
+}
+
+.user form input[type="checkbox"] {
+    margin: 10px;
+}
+
+.user form button {
+    width: 100%;
+    cursor: pointer;
+    transition: transform 250ms ease;
+}
+
+.user form button:hover {
+    transform: scale(1.02);
+}
+
+table {
+    /* border: 1px solid forestgreen; */
+    border-top: 1px solid forestgreen;
+    border-left: 1px solid forestgreen;
+    width: 1200px;
+    height: 200px;
+}
+ 
+th {
+    border-bottom: 1px solid forestgreen;
+    border-right: 1px solid forestgreen;
+    padding: 10px 17px;
+}
+ 
+td {
+    border-bottom: 1px solid forestgreen;
+    border-right: 1px solid forestgreen;
+    text-align: center;
+}
+
+.param-conteiner {
+    width: 350px;
+    height: 300px;
+    color:black;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: white
+}
+
+.param-form {
+    width: 275px;
+    margin: 0 auto 20px auto;
+    text-align: center;
+}
+
+.param-input {
+    width: 260px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.add-btn, save-btn {
+    margin-bottom: 10px;
+    width: 260px;
+    height: 28px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 10px;
+}
+
+.add-btn:hover, save-btn:hover {
+    background-color: green; 
+    transition: background-color .3s linear;
+}
+
+#reg-btn {
+    margin-bottom: 10px;
+    width: 260px;
+    height: 28px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 10px;
+}
+
+#reg-btn:hover {
+    background-color: green; 
+    transition: background-color .4s linear;
+}
+
+.pagination {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 40px;
+    li {
+        display: inline-block;
+        padding: 10px 17px;
+        color: black;
+        background-color: white;
+        font-size: 18px;
+        border-radius: 10px;
+        margin-right: 15px;
+        border: 3px solid rgba(0, 100, 0, 0.7);
+        cursor: pointer;
+        &.active {
+            background-color: green;
+            color: #fff;
+        }
+    }
+}
+
+.row-image {
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 10px;
+}
