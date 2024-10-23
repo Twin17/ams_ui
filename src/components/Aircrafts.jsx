@@ -1,12 +1,15 @@
-import {useState} from "react"
+import {useState, useRef} from "react"
 import Aircraft from './Aircraft'
 import Modal from "./Modal"
 import EditAircraft from "./EditAircraft"
+import DeleteAircraft from "./DeleteAircraft"
 
 function Aircrafts ({aircrafts, onAdd, onEdit, onDelete}) {
     const [modalActive, setModalActive] = useState(false)
+    const [deleteActive, setDeleteActive] = useState(false)
     const [aircraft, setAircraft] = useState({})
     const [isAdd, setIsAdd] = useState(false)
+    const imageUrl = useRef('')
 
     if (aircrafts.length > 0)
         return (
@@ -22,14 +25,23 @@ function Aircrafts ({aircrafts, onAdd, onEdit, onDelete}) {
                 }
                 }>Добавить</button>
                 <Modal active={modalActive} setActive={setModalActive}>
-                    {/* {console.log('air_1 = ', aircraft)} */}
                     <EditAircraft 
                         className="editAircraft" 
                         onAdd={onAdd} 
-                        onEdit={onEdit} 
+                        onEdit={onEdit}
                         aircraft={aircraft} 
                         setModalActive={setModalActive}
                         isAdd={isAdd}
+                        imageUrl={imageUrl}
+                    />
+                </Modal>
+                <Modal active={deleteActive} setActive={setDeleteActive}>
+                    <DeleteAircraft
+                        className="deleteAircraft"
+                        aircraft={aircraft}
+                        onDelete={onDelete}
+                        setDeleteActive={setDeleteActive}
+                        imageUrl={imageUrl}
                     />
                 </Modal>
                 <table>
@@ -45,11 +57,11 @@ function Aircrafts ({aircrafts, onAdd, onEdit, onDelete}) {
                     </tr>
                     {aircrafts.map(el => (
                         <Aircraft key={el.id} el={el} 
-                            onEdit={onEdit} 
-                            onDelete={onDelete} 
                             setAircraft={setAircraft} 
                             setModalActive={setModalActive}
+                            setDeleteActive={setDeleteActive}
                             setIsAdd={setIsAdd}
+                            imageUrl={imageUrl}
                         />
                     ))}
                     </tbody>

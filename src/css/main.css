@@ -31,18 +31,12 @@ main .aircraft {
     padding: 20px;
 }
 
-main .delete-icon {
+main .delete-icon,
+main .edit-icon
+{
     float: left;
-    margin-left: 25px;
+    margin-left: 40px;
     color: #134b57;
-    cursor: pointer;
-    transform: scale(2);
-}
-
-main .edit-icon {
-    float: left;
-    margin-left: 25px;
-    color: #165664;
     cursor: pointer;
     transform: scale(2);
 }
@@ -102,9 +96,13 @@ td {
     text-align: center;
 }
 
+tr {
+    height: 50px;
+}
+
 .param-conteiner {
     width: 350px;
-    height: 300px;
+    height: 405px;
     color:black;
     text-align: center;
     border: 1px solid black;
@@ -113,9 +111,15 @@ td {
 }
 
 .param-form {
-    width: 275px;
+    width: 290px;
     margin: 0 auto 20px auto;
     text-align: center;
+    li {
+        display: inline-block;
+        padding: 5px 5px;
+        border: 3px solid rgba(0, 100, 0, 0.7);
+        margin-bottom: 10px;
+    }    
 }
 
 .param-input {
@@ -135,7 +139,7 @@ td {
 
 .add-btn:hover, save-btn:hover {
     background-color: green; 
-    transition: background-color .3s linear;
+    transition: background-color .2s linear;
 }
 
 #reg-btn {
@@ -156,7 +160,7 @@ td {
     list-style: none;
     padding: 0;
     margin: 0;
-    margin-top: 40px;
+    margin-top: 30px;
     li {
         display: inline-block;
         padding: 10px 17px;
